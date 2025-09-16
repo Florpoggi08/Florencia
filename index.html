@@ -26,6 +26,245 @@
       align-items:flex-start;
       justify-content:center;
       padding:32px;
-      -webkit
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .container{
+      width:100%;
+      max-width:var(--maxw);
+    }
+
+    header.site-header{
+      display:flex;
+      gap:16px;
+      align-items:flex-start;
+      margin-bottom:22px;
+      flex-wrap: wrap;
+    }
+
+    .logo{
+      width:72px;
+      height:72px;
+      border-radius:14px;
+      background:linear-gradient(135deg, #ff90e8 0%, #d946ef 100%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:white;
+      font-size:20px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.6);
+      flex:0 0 72px;
+    }
+
+    .site-title{
+      line-height:1;
+      flex: 1;
+    }
+
+    .site-title h1{
+      margin:0;
+      font-size:22px;
+    }
+
+    .site-title p{
+      margin:2px 0 6px 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .intro{
+      font-size:14px;
+      margin: 8px 0;
+      color: var(--soft);
+    }
+
+    .about-btn{
+      background: var(--accent);
+      color: #3b0a63;
+      padding: 8px 14px;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      font-size: 14px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 6px;
+    }
+
+    nav{
+      margin-top:12px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+
+    .nav-link{
+      color:var(--muted);
+      text-decoration:none;
+      font-size:13px;
+      padding:8px 12px;
+      border-radius:10px;
+      background:transparent;
+    }
+
+    .nav-link:hover{
+      background:rgba(255,255,255,0.05);
+      color:var(--soft);
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:20px;
+      align-items:start;
+    }
+
+    @media (max-width:920px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    main.posts{
+      display:flex;
+      flex-direction:column;
+      gap:18px;
+    }
+
+    article.post{
+      background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.04);
+      padding:18px;
+      border-radius:var(--radius);
+      box-shadow:0 6px 18px rgba(2,6,23,0.6);
+      overflow:hidden;
+    }
+
+    .post-header{
+      display:flex;
+      gap:14px;
+      align-items:flex-start;
+    }
+
+    .post-image{
+      width:120px;
+      height:80px;
+      border-radius:8px;
+      background-size:cover;
+      background-position:center;
+      flex:0 0 120px;
+      box-shadow:0 6px 14px rgba(2,6,23,0.6);
+    }
+
+    .post-meta h2{
+      margin:0 0 6px 0;
+      font-size:18px;
+      color:var(--soft);
+    }
+
+    .post-meta .date{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    .post-excerpt{
+      margin-top:12px;
+      color: #f3eaff;
+      line-height:1.5;
+      font-size:15px;
+    }
+
+    .read-more{
+      display:inline-block;
+      margin-top:12px;
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:600;
+      font-size:14px;
+    }
+
+    aside.sidebar{
+      position:relative;
+      top:0;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));
+      border:1px solid rgba(255,255,255,0.03);
+      padding:16px;
+      border-radius:12px;
+    }
+
+    .follow-me{
+      display:flex;
+      gap:12px;
+      align-items:center;
+      margin-bottom:12px;
+    }
+
+    .avatar{
+      width:56px;
+      height:56px;
+      border-radius:10px;
+      background:linear-gradient(135deg,#f9a8d4,#fcd34d);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#1b1b1b;
+      font-weight:700;
+      box-shadow:0 6px 12px rgba(2,6,23,0.6);
+      flex:0 0 56px;
+    }
+
+    .small-muted{font-size:13px;color:var(--muted);margin:0}
+    .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .tag{
+      background:rgba(255,255,255,0.03);
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:13px;
+      color:var(--soft);
+      text-decoration:none;
+    }
+
+    footer{
+      margin-top:22px;
+      color:var(--muted);
+      font-size:13px;
+      text-align:center;
+    }
+
+    .kicker{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+    .post-body img{max-width:100%;border-radius:10px;display:block;margin:12px 0}
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header class="site-header" aria-label="cabecera del blog">
+      <div class="logo" aria-hidden="true">OR</div>
+      <div class="site-title">
+        <h1>Olivia Rodrigo Fan Club</h1>
+        <p>Noticias, discos, conciertos y curiosidades sobre Olivia Rodrigo</p>
+
+        <p class="intro"><strong>Florencia Poggi</strong> · 17 años · Alumna del colegio Calasanz</p>
+        <a class="about-btn" href="sobremi.html">Sobre mí</a>
+
+        <nav aria-label="navegación principal">
+          <a class="nav-link" href="#post1">Inicio</a>
+          <a class="nav-link" href="#post2">Álbumes</a>
+          <a class="nav-link" href="#post3">Conciertos</a>
+          <a class="nav-link" href="#post4">Curiosidades</a>
+        </nav>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main class="posts" aria-live="polite">
+
+        <!-- Post 1 -->
+        <article id="post1" class="post" aria-labelledby="p1title">
+          <div class="post-header">
+            <div class="post-image" style="background-image:url('https://upload
 
     
