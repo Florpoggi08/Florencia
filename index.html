@@ -1,130 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Olivia Rodrigo Fan Blog</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Blog: Olivia Rodrigo Fan Club</title>
   <style>
-    /* Colores y estilo general */
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: radial-gradient(circle at top, #8b5cf6 0%, #581c87 100%);
-      color: #fefefe;
-      background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); /* estrellitas */
+      background-color: #7c3aed; /* violeta básico */
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      line-height: 1.5;
     }
-
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-
     header {
-      text-align: center;
-      margin-bottom: 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
     }
-
     header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
+      margin: 0;
     }
-
-    header p {
-      font-size: 1rem;
-      color: #e0d4f7;
-      margin: 4px 0;
+    button {
+      background-color: #5a2abd;
+      border: none;
+      padding: 10px 15px;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 14px;
+      transition: background-color 0.3s ease;
     }
-
-    .about-btn {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 10px 16px;
-      background: #f472b6;
-      color: #2e1065;
+    button:hover {
+      background-color: #4a1f93;
+    }
+    .intro {
+      margin-bottom: 40px;
+      background: rgba(255,255,255,0.1);
+      padding: 15px 20px;
+      border-radius: 12px;
+      max-width: 400px;
+    }
+    .intro p {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+    .content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    section {
+      margin-bottom: 40px;
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 12px;
+    }
+    section h2 {
+      margin-top: 0;
+      border-bottom: 2px solid white;
+      padding-bottom: 8px;
+      font-size: 24px;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-top: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    a {
+      color: #fbbf24; /* amarillo suave */
       text-decoration: none;
-      border-radius: 10px;
       font-weight: bold;
     }
-
-    section {
-      margin-bottom: 60px;
-    }
-
-    section h2 {
-      font-size: 1.8rem;
-      border-bottom: 2px solid #a78bfa;
-      padding-bottom: 6px;
-      margin-bottom: 20px;
-    }
-
-    .card {
-      background-color: rgba(255, 255, 255, 0.05);
-      border-radius: 12px;
-      padding: 20px;
-      margin-bottom: 24px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-      margin-top: 12px;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.9rem;
-      color: #d1c4e9;
-      margin-top: 60px;
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Olivia Rodrigo: Música, Proyectos y Fans</h1>
-      <p>Blog creado por <strong>Florencia Poggi</strong> — 17 años</p>
-      <a href="sobremi.html" class="about-btn">Sobre mí</a>
-    </header>
 
-    <section>
-      <h2>🎵 Su música</h2>
-      <div class="card">
-        <p>Olivia Rodrigo se destaca por su estilo emocional, íntimo y poderoso. Sus letras hablan de amor, desamor, crecimiento personal y juventud. Su primer sencillo, "drivers license", la convirtió en una sensación mundial.</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Olivia_Rodrigo_2021.png" alt="Olivia Rodrigo sonriendo" />
-      </div>
-    </section>
+  <header>
+    <h1>Olivia Rodrigo Fan Club</h1>
+    <button onclick="location.href='sobremi.html'">Sobre mí</button>
+  </header>
 
-    <section>
-      <h2>📀 Álbumes</h2>
-      <div class="card">
-        <p>Hasta ahora ha lanzado dos álbumes: <strong>SOUR</strong> (2021) y <strong>GUTS</strong> (2023). Ambos fueron aclamados por la crítica y amados por sus fans. Con un sonido pop-rock alternativo, Olivia ha mostrado mucha madurez en su evolución musical.</p>
-        <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Olivia_Rodrigo_-_Sour.png" alt="Portada del álbum SOUR" />
-        <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Olivia_Rodrigo_-_Guts.png" alt="Portada del álbum GUTS" />
-      </div>
-    </section>
-
-    <section>
-      <h2>💡 Proyectos actuales</h2>
-      <div class="card">
-        <p>Además de la música, Olivia ha participado en películas y shows. Está explorando nuevas formas de expresión, incluyendo la escritura y el activismo juvenil. Actualmente se encuentra en su gira internacional de GUTS.</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Olivia_Rodrigo_VMA_2021.jpg" alt="Olivia en alfombra roja" />
-      </div>
-    </section>
-
-    <section>
-      <h2>❤️ Fans y comunidad</h2>
-      <div class="card">
-        <p>Su base de fans es muy leal, y Olivia se muestra cercana en redes sociales. Muchos jóvenes se identifican con sus letras. Su comunidad crece cada día con más seguidores que comparten su arte, covers y mensajes positivos.</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Olivia_Rodrigo_Sour_Tour.jpeg" alt="Olivia Rodrigo en concierto" />
-      </div>
-    </section>
-
-    <footer>
-      <p>Hecho con 💜 por Florencia Poggi | Proyecto escolar</p>
-    </footer>
+  <div class="intro">
+    <p><strong>Nombre:</strong> Florencia Poggi</p>
+    <p><strong>Edad:</strong> 17 años</p>
+    <p><strong>Colegio:</strong> Calasanz</p>
   </div>
+
+  <div class="content">
+    <section>
+      <h2>Sobre Olivia Rodrigo</h2>
+      <p>Olivia Rodrigo es una cantante, compositora y actriz estadounidense que saltó a la fama en 2021 con su sencillo debut <em>"drivers license"</em>, que se convirtió en un éxito mundial inmediato. Su estilo mezcla pop, rock y baladas emocionales, con letras que reflejan experiencias personales y emociones reales.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/Olivia_Rodrigo_May_2022.png" alt="Olivia Rodrigo en concierto">
+    </section>
+
+    <section>
+      <h2>Álbumes Destacados</h2>
+      <p>Su álbum debut <em>"SOUR"</em> fue lanzado en 2021 y recibió elogios por su honestidad lírica y producción. Incluye canciones como <em>"good 4 u"</em>, <em>"deja vu"</em> y <em>"traitor"</em>. Ha ganado varios premios importantes y se ha convertido en un ícono para la juventud actual.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/en/0/0a/Olivia_Rodrigo_-_SOUR.png" alt="Portada del álbum SOUR">
+    </section>
+
+    <section>
+      <h2>Proyectos y carrera</h2>
+      <p>Además de la música, Olivia comenzó su carrera como actriz en series juveniles como <em>"Bizaardvark"</em> y <em>"High School Musical: The Musical: The Series"</em>. Continúa trabajando en nuevos proyectos musicales y su impacto en la cultura pop sigue creciendo.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Olivia_Rodrigo_Performing_in_2022.jpg" alt="Olivia Rodrigo actuando en vivo">
+    </section>
+
+    <section>
+      <h2>La comunidad de fans</h2>
+      <p>Olivia tiene una base de fans muy activa y apasionada, que sigue cada uno de sus lanzamientos y conciertos. Sus seguidores suelen compartir experiencias, fan art y mensajes de apoyo en redes sociales, creando una comunidad unida y creativa.</p>
+      <img src="https://cdn.vox-cdn.com/thumbor/9xDSx7Te2Z5HNu3CAbLBS_GI_GM=/0x0:1600x1067/1200x800/filters:focal(672x406:928x662)/cdn.vox-cdn.com/uploads/chorus_image/image/72258361/1176056816.jpg.0.jpg" alt="Fans de Olivia Rodrigo en concierto">
+    </section>
+  </div>
+
 </body>
 </html>
-
