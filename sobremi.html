@@ -3,95 +3,163 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Desde su Ventana ✨</title>
+  <title>El mundo de Florencia 💕</title>
   <style>
     body {
       margin: 0;
-      font-family: 'Courier New', monospace;
-      background: linear-gradient(to top, #ffe6f0, #f5f0ff);
-      overflow: hidden;
-      color: #5c4a72;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #ffeaf5, #f3e8ff);
+      color: #5c3b6f;
     }
 
-    .window {
-      width: 100vw;
-      height: 100vh;
-      background: url('https://i.imgur.com/Ob6cZMB.png') no-repeat center center;
-      background-size: cover;
-      position: relative;
+    header {
+      text-align: center;
+      padding: 40px 20px 10px;
     }
 
-    .curtains {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to right, rgba(255, 228, 240, 0.8), rgba(255, 255, 255, 0.6), rgba(255, 228, 240, 0.8));
-      animation: wave 10s ease-in-out infinite;
-      z-index: 1;
+    header h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
     }
 
-    @keyframes wave {
-      0% { transform: translateX(0); }
-      50% { transform: translateX(10px); }
-      100% { transform: translateX(0); }
+    header p {
+      font-size: 1.2em;
+      color: #a17fb8;
     }
 
-    .text-box {
-      position: absolute;
-      bottom: 10%;
-      left: 5%;
-      right: 5%;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.6);
-      border-radius: 12px;
-      backdrop-filter: blur(5px);
-      z-index: 2;
-      animation: fadeIn 3s ease;
+    .main-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 20px;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .window-img {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
 
-    .text-box p {
-      font-size: 1.2rem;
+    .bio-box {
+      margin-top: 30px;
+      background: rgba(255, 255, 255, 0.7);
+      padding: 25px;
+      border-radius: 16px;
+      max-width: 600px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .bio-box h2 {
+      margin-bottom: 10px;
+      font-size: 1.6em;
+    }
+
+    .bio-box p {
+      font-size: 1.1em;
       line-height: 1.6;
-      color: #7b578f;
-      margin: 0;
+    }
+
+    .artists {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 25px;
+    }
+
+    .artist-card {
+      background: #fff0fa;
+      border: 2px solid #f8d1ec;
+      padding: 10px;
+      border-radius: 12px;
+      text-align: center;
+      width: 130px;
+      transition: transform 0.3s;
+    }
+
+    .artist-card img {
+      width: 100%;
+      border-radius: 10px;
+      height: auto;
+    }
+
+    .artist-card:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      padding: 20px;
+      font-size: 1em;
+      color: #86609e;
     }
 
     .butterfly {
-      position: absolute;
-      top: 20%;
-      left: 10%;
-      width: 80px;
-      animation: flutter 12s infinite ease-in-out;
-      z-index: 3;
+      position: fixed;
+      width: 60px;
+      top: 30px;
+      left: 30px;
+      animation: float 6s infinite ease-in-out;
     }
 
-    @keyframes flutter {
-      0% { transform: translateY(0) rotate(0deg); }
-      50% { transform: translateY(-20px) rotate(10deg); }
-      100% { transform: translateY(0) rotate(0deg); }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
     }
+
   </style>
 </head>
 <body>
 
-  <div class="window">
-    <div class="curtains"></div>
-    <img src="https://i.imgur.com/8rWv3o0.png" alt="mariposa" class="butterfly">
+  <img src="https://i.imgur.com/YBtU8xP.png" alt="Mariposa" class="butterfly">
 
-    <div class="text-box">
-      <p>Desde esta ventana, se ve un universo distinto...<br><br>
-        Uno lleno de playlists que se sienten como abrazos, tardes con aroma a vainilla y letras que la hacen llorar aunque ya se sepa la canción de memoria.<br><br>
-        Ella es de esas personas que cantan <strong>Taylor Swift</strong> como si cada verso hablara de su vida. Que se pierde en los mundos de <strong>Harry Styles</strong>. Que memoriza los puentes de <strong>Sabrina Carpenter</strong>. Y que encuentra consuelo en las canciones íntimas de <strong>Gracie Abrams</strong>.<br><br>
-        No necesita ser comprendida por todos. Solo necesita su música, su mundo... su ventana ✨
-      </p>
+  <header>
+    <h1>Bienvenidos al mundo de Florencia 💕</h1>
+    <p>Una chica de 17 años con corazón de canción y alma soñadora ✨</p>
+  </header>
+
+  <div class="main-content">
+    <img src="https://i.imgur.com/O68Plxz.jpg" alt="Ventana estética" class="window-img">
+
+    <div class="bio-box">
+      <h2>Sobre mí 🌸</h2>
+      <p>Me llamo <strong>Florencia Poggi</strong>, tengo 17 años y vivo con música en el corazón.  
+      Me encantan las tardes tranquilas, los atardeceres pastel, escribir lo que siento, y perderme en canciones que me hacen soñar.</p>
+      <p>Mis artistas favoritos son:</p>
+
+      <div class="artists">
+        <div class="artist-card">
+          <img src="https://i.imgur.com/JlgGLvH.jpg" alt="Taylor Swift">
+          <p><strong>Taylor Swift</strong></p>
+        </div>
+        <div class="artist-card">
+          <img src="https://i.imgur.com/7ROnH96.jpg" alt="Harry Styles">
+          <p><strong>Harry Styles</strong></p>
+        </div>
+        <div class="artist-card">
+          <img src="https://i.imgur.com/DUw2ItZ.jpg" alt="Sabrina Carpenter">
+          <p><strong>Sabrina Carpenter</strong></p>
+        </div>
+        <div class="artist-card">
+          <img src="https://i.imgur.com/t7gHExw.jpg" alt="Gracie Abrams">
+          <p><strong>Gracie Abrams</strong></p>
+        </div>
+      </div>
+
+      <p style="margin-top: 20px;">Este es solo el primer capítulo...  
+      <br>💻✨ ¡Próximamente voy a subir más vlogs, más historias, más de mí! 🌷</p>
     </div>
   </div>
+
+  <footer>
+    hecho con 💖 por Florencia Poggi | 2025
+  </footer>
 
 </body>
 </html>
