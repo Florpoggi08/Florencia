@@ -1,1 +1,97 @@
-ghikcc
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Desde su Ventana ✨</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Courier New', monospace;
+      background: linear-gradient(to top, #ffe6f0, #f5f0ff);
+      overflow: hidden;
+      color: #5c4a72;
+    }
+
+    .window {
+      width: 100vw;
+      height: 100vh;
+      background: url('https://i.imgur.com/Ob6cZMB.png') no-repeat center center;
+      background-size: cover;
+      position: relative;
+    }
+
+    .curtains {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right, rgba(255, 228, 240, 0.8), rgba(255, 255, 255, 0.6), rgba(255, 228, 240, 0.8));
+      animation: wave 10s ease-in-out infinite;
+      z-index: 1;
+    }
+
+    @keyframes wave {
+      0% { transform: translateX(0); }
+      50% { transform: translateX(10px); }
+      100% { transform: translateX(0); }
+    }
+
+    .text-box {
+      position: absolute;
+      bottom: 10%;
+      left: 5%;
+      right: 5%;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.6);
+      border-radius: 12px;
+      backdrop-filter: blur(5px);
+      z-index: 2;
+      animation: fadeIn 3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .text-box p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #7b578f;
+      margin: 0;
+    }
+
+    .butterfly {
+      position: absolute;
+      top: 20%;
+      left: 10%;
+      width: 80px;
+      animation: flutter 12s infinite ease-in-out;
+      z-index: 3;
+    }
+
+    @keyframes flutter {
+      0% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(10deg); }
+      100% { transform: translateY(0) rotate(0deg); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="window">
+    <div class="curtains"></div>
+    <img src="https://i.imgur.com/8rWv3o0.png" alt="mariposa" class="butterfly">
+
+    <div class="text-box">
+      <p>Desde esta ventana, se ve un universo distinto...<br><br>
+        Uno lleno de playlists que se sienten como abrazos, tardes con aroma a vainilla y letras que la hacen llorar aunque ya se sepa la canción de memoria.<br><br>
+        Ella es de esas personas que cantan <strong>Taylor Swift</strong> como si cada verso hablara de su vida. Que se pierde en los mundos de <strong>Harry Styles</strong>. Que memoriza los puentes de <strong>Sabrina Carpenter</strong>. Y que encuentra consuelo en las canciones íntimas de <strong>Gracie Abrams</strong>.<br><br>
+        No necesita ser comprendida por todos. Solo necesita su música, su mundo... su ventana ✨
+      </p>
+    </div>
+  </div>
+
+</body>
+</html>
