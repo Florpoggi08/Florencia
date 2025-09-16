@@ -1,192 +1,130 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Blog: Olivia Rodrigo Fan Club</title>
-  <meta name="description" content="Blog de fans sobre Olivia Rodrigo — noticias, álbumes, conciertos y curiosidades." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Olivia Rodrigo Fan Blog</title>
   <style>
-    :root {
-      --bg: #3b0764;
-      --card: #240046;
-      --muted: #d8b4fe;
-      --accent: #f472b6;
-      --soft: #fce7f3;
-      --maxw: 1000px;
-      --radius: 12px;
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
+    /* Colores y estilo general */
     body {
       margin: 0;
-      background: linear-gradient(180deg,#3b0764 0%, #5b21b6 100%);
-      color: var(--soft);
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      padding: 32px;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top, #8b5cf6 0%, #581c87 100%);
+      color: #fefefe;
+      background-image: url('https://www.transparenttextures.com/patterns/stardust.png'); /* estrellitas */
     }
 
     .container {
-      width: 100%;
-      max-width: var(--maxw);
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 40px 20px;
     }
 
-    header.site-header {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-      margin-bottom: 22px;
-      flex-wrap: wrap;
+    header {
+      text-align: center;
+      margin-bottom: 40px;
     }
 
-    .logo {
-      width: 72px;
-      height: 72px;
-      border-radius: 14px;
-      background: linear-gradient(135deg, #f472b6 0%, #c084fc 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      color: white;
-      font-size: 20px;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
-      flex: 0 0 72px;
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
 
-    .site-title {
-      line-height: 1;
-      flex: 1;
-    }
-
-    .site-title h1 {
-      margin: 0;
-      font-size: 22px;
-    }
-
-    .site-title p {
-      margin: 2px 0 6px 0;
-      color: var(--muted);
-      font-size: 14px;
-    }
-
-    .intro {
-      font-size: 14px;
-      color: var(--soft);
+    header p {
+      font-size: 1rem;
+      color: #e0d4f7;
+      margin: 4px 0;
     }
 
     .about-btn {
       display: inline-block;
-      margin-top: 8px;
-      padding: 8px 14px;
-      background: var(--accent);
-      color: #3b0764;
-      border: none;
-      border-radius: 10px;
-      font-weight: 600;
-      font-size: 14px;
-      text-decoration: none;
-    }
-
-    nav {
       margin-top: 12px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-    .nav-link {
-      color: var(--muted);
+      padding: 10px 16px;
+      background: #f472b6;
+      color: #2e1065;
       text-decoration: none;
-      font-size: 13px;
-      padding: 8px 12px;
       border-radius: 10px;
-      background: transparent;
-    }
-    .nav-link:hover {
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--soft);
+      font-weight: bold;
     }
 
-    /* TODO: el resto de tu CSS es idéntico, así que lo dejamos sin cambios */
+    section {
+      margin-bottom: 60px;
+    }
 
-    /* 🟣 MÁS ABAJO REEMPLAZAMOS LAS IMÁGENES DE LOS POSTS */
+    section h2 {
+      font-size: 1.8rem;
+      border-bottom: 2px solid #a78bfa;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 12px;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #d1c4e9;
+      margin-top: 60px;
+    }
   </style>
 </head>
 <body>
-  <div class="container" role="main">
-    <header class="site-header" aria-label="cabecera del blog">
-      <div class="logo" aria-hidden="true">OR</div>
-      <div class="site-title">
-        <h1>Olivia Rodrigo Fan Club</h1>
-        <p>Noticias, discos, conciertos y curiosidades sobre Olivia Rodrigo</p>
-
-        <!-- 🟣 NUEVA INTRO -->
-        <p class="intro"><strong>Florencia Poggi</strong>, 17 años, alumna del colegio Calasanz</p>
-        <a class="about-btn" href="sobremi.html">Sobre mí</a>
-
-        <nav aria-label="navegación principal">
-          <a class="nav-link" href="#post1">Inicio</a>
-          <a class="nav-link" href="#post2">Álbumes</a>
-          <a class="nav-link" href="#post3">Conciertos</a>
-          <a class="nav-link" href="#post4">Curiosidades</a>
-        </nav>
-      </div>
+  <div class="container">
+    <header>
+      <h1>Olivia Rodrigo: Música, Proyectos y Fans</h1>
+      <p>Blog creado por <strong>Florencia Poggi</strong> — 17 años</p>
+      <a href="sobremi.html" class="about-btn">Sobre mí</a>
     </header>
 
-    <div class="grid">
-      <main class="posts" aria-live="polite">
-        <!-- Post 1 -->
-        <article id="post1" class="post" aria-labelledby="p1title">
-          <div class="post-header">
-            <div class="post-image" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/2/29/Olivia_Rodrigo_2021.png');" role="img" aria-label="Olivia Rodrigo sonriendo en evento"></div>
-            <div class="post-meta">
-              <p class="kicker">Biografía breve</p>
-              <h2 id="p1title">Quién es Olivia Rodrigo</h2>
-              <p class="date">Publicado: 15 de julio, 2023 · Por Fan Club</p>
-            </div>
-          </div>
-          <div class="post-excerpt">
-            Olivia Rodrigo saltó a la fama como actriz y después se consolidó como una de las voces pop más potentes de su generación. Con letras confesionales y melodías pegadizas, sus primeros lanzamientos generaron un impacto inmediato en la industria.
-            <a class="read-more" href="#post1">Leer más →</a>
-          </div>
-        </article>
+    <section>
+      <h2>🎵 Su música</h2>
+      <div class="card">
+        <p>Olivia Rodrigo se destaca por su estilo emocional, íntimo y poderoso. Sus letras hablan de amor, desamor, crecimiento personal y juventud. Su primer sencillo, "drivers license", la convirtió en una sensación mundial.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Olivia_Rodrigo_2021.png" alt="Olivia Rodrigo sonriendo" />
+      </div>
+    </section>
 
-        <!-- Post 2 -->
-        <article id="post2" class="post" aria-labelledby="p2title">
-          <div class="post-header">
-            <div class="post-image" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/0/01/Olivia_Rodrigo_VMA_2021.jpg');" role="img" aria-label="Olivia Rodrigo en los VMAs 2021"></div>
-            <div class="post-meta">
-              <p class="kicker">Discografía destacada</p>
-              <h2 id="p2title">Álbumes y singles imprescindibles</h2>
-              <p class="date">Publicado: 02 de marzo, 2024 · Por Fan Club</p>
-            </div>
-          </div>
-          <div class="post-excerpt">
-            Desde su álbum debut hasta sus lanzamientos más recientes, Olivia ha mostrado evolución estilística y madurez lírica. Aquí destacamos canciones que marcan su carrera, su sonido característico y cómo ha influido en el pop moderno.
-            <a class="read-more" href="#post2">Leer más →</a>
-          </div>
-        </article>
+    <section>
+      <h2>📀 Álbumes</h2>
+      <div class="card">
+        <p>Hasta ahora ha lanzado dos álbumes: <strong>SOUR</strong> (2021) y <strong>GUTS</strong> (2023). Ambos fueron aclamados por la crítica y amados por sus fans. Con un sonido pop-rock alternativo, Olivia ha mostrado mucha madurez en su evolución musical.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Olivia_Rodrigo_-_Sour.png" alt="Portada del álbum SOUR" />
+        <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/Olivia_Rodrigo_-_Guts.png" alt="Portada del álbum GUTS" />
+      </div>
+    </section>
 
-        <!-- Post 3 -->
-        <article id="post3" class="post" aria-labelledby="p3title">
-          <div class="post-header">
-            <div class="post-image" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/3/34/Olivia_Rodrigo_Sour_Tour.jpeg');" role="img" aria-label="Olivia Rodrigo en concierto Sour Tour"></div>
-            <div class="post-meta">
-              <p class="kicker">Gira y conciertos</p>
-              <h2 id="p3title">Experiencias en vivo: cómo es un concierto de Olivia</h2>
-              <p class="date">Publicado: 11 de junio, 2024 · Por Fan Club</p>
-            </div>
-          </div>
-          <div class="post-excerpt">
-            Sus shows combinan energía, momentos íntimos y una conexión fuerte con el público. En esta entrada te contamos qué esperar si vas a ver a Olivia en vivo, anécdotas de fans y tips para disfrutar el concierto al máximo.
-            <a class="read-more" href="#post3">Leer más →</a>
-          </div>
-        </article>
+    <section>
+      <h2>💡 Proyectos actuales</h2>
+      <div class="card">
+        <p>Además de la música, Olivia ha participado en películas y shows. Está explorando nuevas formas de expresión, incluyendo la escritura y el activismo juvenil. Actualmente se encuentra en su gira internacional de GUTS.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Olivia_Rodrigo_VMA_2021.jpg" alt="Olivia en alfombra roja" />
+      </div>
+    </section>
 
-        <!-- Post 4 -->
-        <article id="post4" class="post" aria-labelledby
+    <section>
+      <h2>❤️ Fans y comunidad</h2>
+      <div class="card">
+        <p>Su base de fans es muy leal, y Olivia se muestra cercana en redes sociales. Muchos jóvenes se identifican con sus letras. Su comunidad crece cada día con más seguidores que comparten su arte, covers y mensajes positivos.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/34/Olivia_Rodrigo_Sour_Tour.jpeg" alt="Olivia Rodrigo en concierto" />
+      </div>
+    </section>
+
+    <footer>
+      <p>Hecho con 💜 por Florencia Poggi | Proyecto escolar</p>
+    </footer>
+  </div>
+</body>
+</html>
+
