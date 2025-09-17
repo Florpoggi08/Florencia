@@ -2,28 +2,41 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  
   <title>Sobre mí - Florencia Poggi</title>
-  
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f3e8ff;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(to bottom right, #ffe6f0, #e0c3fc);
       margin: 0;
       padding: 0;
-      color: #3b0764;
+      color: #6b006b;
     }
     header {
-      background-color: #c084fc;
+      background-color: #ffb3ec;
       color: white;
-      padding: 20px;
+      padding: 30px;
       text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      position: relative;
+    }
+    header::after {
+      content: "✨";
+      font-size: 40px;
+      position: absolute;
+      top: 10px;
+      right: 20px;
     }
     section {
-      padding: 20px;
+      padding: 25px;
     }
     h2 {
-      color: #7e22ce;
+      color: #d63384;
+      font-size: 24px;
+      text-shadow: 1px 1px #fff0f5;
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6;
     }
     .gallery {
       display: flex;
@@ -33,34 +46,40 @@
       margin-top: 20px;
     }
     .gallery img {
-      width: 250px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      width: 220px;
+      border-radius: 15px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+      border: 3px solid #ffc8dd;
+      transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>¡Hola! Soy Florencia Poggi</h1>
-    <p>Tengo 17 años y soy de Argentina</p>
+    <h1> Florencia Poggi </h1>
+    <p>17 años · Argentina · Amante del arte y la música</p>
   </header>
 
   <section>
-    <h2>Un poco sobre mí</h2>
-    <p>Me encanta escuchar música, leer libros, ver películas y maratonear series. Me apasiona descubrir historias, emociones y estilos que me inspiren. Pronto voy a comenzar a escribir blogs sobre artistas que me fascinan, como Taylor Swift, Harry Styles, Sabrina Carpenter y Gracie Abrams.</p>
+    <h2>Sobre mí</h2>
+    <p>¡Hola! Soy Florencia, tengo 17 años y me encanta escuchar música, leer libros, y ver películas y series. Mis peliculas favoritas son: Harry Potter, Spiderman y Hércules. Estoy por comenzar una serie de blogs dedicados a artistas que me inspiran.Seguime para verlos y no perderte nada!</p>
   </section>
 
   <section>
-    <h2>Próximos blogs</h2>
-    <p>Estos son algunos de los artistas sobre los que voy a escribir:</p>
+    <h2>Próximos blogs ✨</h2>
+    <p>Estos son los artistas que vas a ver muy pronto en mi blog:</p>
     <div class="gallery">
-      <img src=https://upload.wikimedia.org/wikipedia/commons/5/58/Taylor_Swift_2_-_2019_by_Glenn_Francis.jpg alt="Taylor Swift">
-      <img src=https://upload.wikimedia.org/wikipedia/commons/3/3e/Harry_Styles_2019.jpg alt="Harry Styles">
-      <img src=https://upload.wikimedia.org/wikipedia/commons/5/5f/Sabrina_Carpenter_2022.jpg alt="Sabrina Carpenter">
-      <img src=https://upload.wikimedia.org/wikipedia/commons/2/2a/Gracie_Abrams_2022.jpg alt="Gracie Abrams">
+      <img src=https://media.vogue.mx/photos/654fb288625eff53c8632e28/2:3/w_2560%2Cc_limit/taylor-swift-en-argentina.jpg alt="Taylor Swift">
+      <img src=https://media.revistaad.es/photos/68ad78363c699fe44b9cb7ff/1:1/w_4477,h_4477,c_limit/harry%20styles%203.jpg alt="Harry Styles">
+      <img src=https://wallpapers.com/images/hd/sabrina-carpenter-playful-pose-7zgid16uwzlup7aw.jpg alt="Sabrina Carpenter">
+      <img src=https://hips.hearstapps.com/hmg-prod/images/gracie-abrams-beauty-makeup-6867e9da840e0.jpg?resize alt="Gracie Abrams">
     </div>
   </section>
 
 </body>
 </html>
+
