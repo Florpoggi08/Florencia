@@ -1,11 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <header style="background-color: #a855f7; color: white; padding: 60px 20px; text-align: center;">
-  <h1 style="font-size: 56px; margin-bottom: 20px; text-shadow: 2px 2px #6b21a8;">Blog de Olivia Rodrigo</h1>
-  <p style="font-size: 26px; margin-bottom: 30px;">Creado por Florencia Poggi, 17 años, Argentina</p>
-  <nav>
-    <a href="sobremi.html" style="
+  <meta charset="UTF-8">
+  <title>Blog de Olivia Rodrigo</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f3e8ff;
+      margin: 0;
+      padding: 0;
+      color: #3b0764;
+    }
+
+    header {
+      background-color: #a855f7;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 56px;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px #6b21a8;
+    }
+
+    header p {
+      font-size: 26px;
+      margin-bottom: 30px;
+    }
+
+    nav a {
       background-color: white;
       color: #a855f7;
       padding: 12px 24px;
@@ -14,39 +39,88 @@
       font-weight: bold;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       font-size: 18px;
-    ">Conoceme más</a>
-  </nav>
-</header>
+    }
 
-    <main>
-        <article>
-            <h2>Su vida</h2>
-            <p>Olivia Isabel Rodrigo nació el 20 de febrero de 2003 en Temecula, California. Desde pequeña mostró talento para la música y la actuación, participando en clases de canto y teatro. Su salto a la fama fue gracias a Disney Channel, donde protagonizó series como “Bizaardvark” y “High School Musical: The Musical: The Series”.</p>
-            <img src=https://i.pinimg.com/736x/08/1b/13/081b13ffb6902b93fc898e25fb964d1a.jpg alt="Olivia Rodrigo en Vogue">
-        </article>
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
 
-        <article>
-            <h2>Sus proyectos</h2>
-            <p>En 2021, Olivia lanzó su primer sencillo “drivers license”, que se convirtió en un fenómeno global. Ese mismo año presentó su álbum debut <em>SOUR</em>, galardonado con premios Grammy. En 2023 estrenó <em>GUTS</em>, consolidándose como una de las artistas más influyentes de su generación.</p>
-            <img src=https://m.media-amazon.com/images/I/71Te1V90YDL._UF1000,1000_QL80_.jpg alt="Álbum Sour de Olivia Rodrigo">
-        </article>
+    article {
+      margin-bottom: 50px;
+      text-align: center;
+    }
 
-        <article>
-            <h2>Sus fans</h2>
-            <p>Los seguidores de Olivia Rodrigo, conocidos como “Livies”, son una comunidad muy activa en redes sociales. Acompañan cada lanzamiento, participan en tendencias de TikTok e Instagram, y llenan sus conciertos en todo el mundo con un entusiasmo contagioso.</p>
-            <img src=https://es.rollingstone.com/wp-content/uploads/2025/03/olivia-rodrigo-fans-lollapalooza-ph-ignacio-arnedo.jpg alt="Fans en su presentación del Loolapalooza 2025">
-            <img src=https://cloudfront-us-east-1.images.arcpublishing.com/advancelocal/HZTIIVRVZBFR7L7DYHGGCCZCKY.jpg alt="Fans en sus conciertos">
-        </article>
+    article h2 {
+      color: #d63384;
+      font-size: 28px;
+      margin-bottom: 15px;
+    }
 
-        <article>
-            <h2>Su música</h2>
-            <p>Olivia combina pop, rock alternativo e indie en sus canciones. Sus letras reflejan temas como el desamor, la juventud y la búsqueda de identidad. Éxitos como <em>drivers license</em>, <em>good 4 u</em>, <em>deja vu</em> y <em>vampire</em> la han convertido en un ícono de la música actual.</p>
-            <img src=https://www.nme.com/wp-content/uploads/2022/04/olivia-rodrigo-grammys-2022-winners-room-696x442.jpg alt="Olivia Rdorigo y sus premios">
-        </article>
-    </main>
+    article p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
 
-    <footer>
-        <p>Blog creado por Florencia Poggi © 2025</p>
-    </footer>
+    article img {
+      width: 300px;
+      max-width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      margin: 10px;
+    }
+
+    footer {
+      background-color: #a855f7;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Blog de Olivia Rodrigo</h1>
+    <p>Creado por Florencia Poggi, 17 años, Argentina</p>
+    <nav>
+      <a href="sobremi.html">Conoceme más</a>
+    </nav>
+  </header>
+
+  <main>
+    <article>
+      <h2>Su vida</h2>
+      <p>Olivia Isabel Rodrigo nació el 20 de febrero de 2003 en Temecula, California. Desde pequeña mostró talento para la música y la actuación, participando en clases de canto y teatro. Su salto a la fama fue gracias a Disney Channel, donde protagonizó series como “Bizaardvark” y “High School Musical: The Musical: The Series”.</p>
+      <img src=https://i.pinimg.com/736x/08/1b/13/081b13ffb6902b93fc898e25fb964d1a.jpg alt="Olivia Rodrigo en Vogue">
+    </article>
+
+    <article>
+      <h2>Sus proyectos</h2>
+      <p>En 2021, Olivia lanzó su primer sencillo “drivers license”, que se convirtió en un fenómeno global. Ese mismo año presentó su álbum debut <em>SOUR</em>, galardonado con premios Grammy. En 2023 estrenó <em>GUTS</em>, consolidándose como una de las artistas más influyentes de su generación.</p>
+      <img src=https://m.media-amazon.com/images/I/71Te1V90YDL._UF1000,1000_QL80_.jpg alt="Álbum Sour de Olivia Rodrigo">
+    </article>
+
+    <article>
+      <h2>Sus fans</h2>
+      <p>Los seguidores de Olivia Rodrigo, conocidos como “Livies”, son una comunidad muy activa en redes sociales. Acompañan cada lanzamiento, participan en tendencias de TikTok e Instagram, y llenan sus conciertos en todo el mundo con un entusiasmo contagioso.</p>
+      <img src=https://es.rollingstone.com/wp-content/uploads/2025/03/olivia-rodrigo-fans-lollapalooza-ph-ignacio-arnedo.jpg alt="Fans en su presentación del Loolapalooza 2025">
+      <img src=https://cloudfront-us-east-1.images.arcpublishing.com/advancelocal/HZTIIVRVZBFR7L7DYHGGCCZCKY.jpg alt="Fans en sus conciertos">
+    </article>
+
+    <article>
+      <h2>Su música</h2>
+      <p>Olivia combina pop, rock alternativo e indie en sus canciones. Sus letras reflejan temas como el desamor, la juventud y la búsqueda de identidad. Éxitos como <em>drivers license</em>, <em>good 4 u</em>, <em>deja vu</em> y <em>vampire</em> la han convertido en un ícono de la música actual.</p>
+      <img src=https://www.nme.com/wp-content/uploads/2022/04/olivia-rodrigo-grammys-2022-winners-room-696x442.jpg alt="Olivia Rodrigo y sus premios">
+    </article>
+  </main>
+
+  <footer>
+    <p>Blog creado por Florencia Poggi © 2025</p>
+  </footer>
+
 </body>
 </html>
