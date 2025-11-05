@@ -1,1 +1,259 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReMind — Tomate un respiro digital</title>
+  <meta name="description" content="ReMind: proyecto psico-tecnológico para acompañar adolescentes frente a la ansiedad vinculada al uso de redes sociales." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --mint-50:#f4fbf8;
+      --mint-100:#e8f7f1;
+      --mint-200:#cfeee6;
+      --mint-400:#7ac6b2;
+      --mint-600:#2f8f79;
+      --ink:#07323a;
+      --card:#ffffff;
+      --radius:14px;
+      --maxw:1100px;
+      --shadow: 0 6px 24px rgba(47,143,121,0.08);
+    }
 
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:'Open Sans',system-ui,Arial; background:linear-gradient(180deg,var(--mint-50),#f7fffb);color:var(--ink)}
+    a{color:inherit;text-decoration:none}
+
+    .container{max-width:var(--maxw);margin:38px auto;padding:28px;background:var(--card);border-radius:20px;box-shadow:var(--shadow);}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding-bottom:18px;border-bottom:1px solid rgba(15,70,60,0.05)}
+    .logo{font-family:'Poppins',sans-serif;font-weight:700;font-size:1.6rem;color:var(--mint-600)}
+    .logo .mind{font-style:italic;font-weight:500;color:var(--ink);margin-left:6px}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{font-weight:600}
+
+    .grid{display:grid;grid-template-columns:1fr 380px;gap:32px;padding:28px 0}
+
+    .hero h1{font-family:'Poppins',sans-serif;font-size:38px;line-height:1.02;margin:0;color:var(--ink)}
+    .hero p{margin:14px 0 22px;color:#27494a;opacity:0.9}
+
+    .cta{display:inline-block;background:var(--mint-600);color:white;padding:12px 22px;border-radius:999px;font-weight:700;cursor:pointer;box-shadow:0 6px 18px rgba(47,143,121,0.12)}
+
+    .card{background:var(--mint-50);padding:16px;border-radius:12px;border:1px solid rgba(47,143,121,0.06)}
+
+    .illustration{display:flex;align-items:center;justify-content:center;height:320px;border-radius:12px;background:linear-gradient(180deg,var(--mint-100),#dff6ee)}
+    .illustration svg{width:160px;height:160px;opacity:0.95}
+
+    .features{display:flex;gap:12px;margin-top:18px}
+    .feature{flex:1;padding:14px;border-radius:12px;background:linear-gradient(180deg,#f8fffb,var(--mint-50));border:1px solid rgba(47,143,121,0.04)}
+
+    section{padding:18px 0;border-top:1px solid rgba(15,70,60,0.04)}
+    section .section-inner{max-width:900px;margin:12px auto}
+    .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+
+    footer{font-size:0.9rem;color:#234b49;padding-top:10px}
+
+    /* modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(3,18,17,0.45);display:none;align-items:center;justify-content:center;padding:20px}
+    .modal{width:100%;max-width:520px;background:white;border-radius:12px;padding:20px}
+    .timer{font-family:'Poppins';font-size:2.2rem;color:var(--mint-600);text-align:center;margin:8px 0}
+
+    /* responsive */
+    @media (max-width:900px){
+      .grid{grid-template-columns:1fr;}
+      .illustration{height:220px}
+      .cols{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <div class="logo" aria-label="ReMind logo"><span class="re">Re</span><span class="mind">Mind</span></div>
+      <nav aria-label="Navegación principal">
+        <ul>
+          <li><a href="#about">Sobre</a></li>
+          <li><a href="#features">Funciones</a></li>
+          <li><a href="#team">Equipo</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="grid">
+      <div class="hero">
+        <h1>Tomate un respiro digital</h1>
+        <p>ReMind es una iniciativa psico-tecnológica orientada a adolescentes que buscan regular su relación con las redes sociales y reducir la ansiedad asociada a su uso.</p>
+        <div style="display:flex;gap:12px;align-items:center">
+          <button class="cta" id="startBtn">Iniciar desconexión</button>
+          <a href="#about" style="padding:10px 14px;border-radius:10px;background:transparent;border:1px solid rgba(47,143,121,0.08);font-weight:600">Conocé más</a>
+        </div>
+
+        <div class="features" style="margin-top:26px">
+          <div class="feature">
+            <strong>Autoevaluación</strong>
+            <div style="font-size:0.9rem;margin-top:6px;color:#234b49">Test breve para identificar señales de ansiedad digital.</div>
+          </div>
+          <div class="feature">
+            <strong>Diario emocional</strong>
+            <div style="font-size:0.9rem;margin-top:6px;color:#234b49">Registro simple y privado para monitorear estados de ánimo.</div>
+          </div>
+          <div class="feature">
+            <strong>Micro-prácticas</strong>
+            <div style="font-size:0.9rem;margin-top:6px;color:#234b49">Ejercicios de respiración y pausas conscientes integrados.</div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="illustration" role="img" aria-label="Ilustración de meditación">
+          <!-- simple SVG icon -->
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="32" cy="32" r="30" fill="rgba(47,143,121,0.06)" />
+            <path d="M32 18a4 4 0 1 0 0 8 4 4 0 0 0 0-8zM20 44c2.8-6 13-6 16 0" stroke="var(--mint-600)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 34c4-2 10-2 14 0 4 2 8 2 12 0" stroke="var(--mint-600)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <div style="height:18px"></div>
+        <div class="card" style="padding:16px">
+          <strong>Recursos rápidos</strong>
+          <ul style="margin:10px 0 0;padding-left:16px;color:#214a49;line-height:1.6">
+            <li>Ejercicio del día (2–5 min)</li>
+            <li>Registro emocional</li>
+            <li>Micro-tips para uso consciente</li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <section id="about">
+      <div class="section-inner">
+        <h2 style="font-family:'Poppins',sans-serif;color:var(--mint-600);margin:0 0 10px">¿Qué es ReMind?</h2>
+        <p>ReMind es un proyecto educativo y preventivo diseñado por estudiantes y supervisado por psicólogos con el objetivo de <strong>reducir la ansiedad en adolescentes</strong> vinculada al uso excesivo de redes sociales. Combina herramientas de psicoeducación, autorregistro y prácticas breves de autocuidado digital.</p>
+
+        <div style="margin-top:10px;color:#224a49">La propuesta no reemplaza la terapia profesional: actúa como un complemento accesible, con contenidos validados por especialistas y mecanismos claros para derivar a quienes necesiten intervención clínica.</div>
+      </div>
+    </section>
+
+    <section id="features">
+      <div class="section-inner">
+        <h3 style="font-family:'Poppins',sans-serif;color:var(--mint-600);margin:6px 0">Funciones destacadas</h3>
+        <div class="cols" style="margin-top:12px">
+          <div class="card">
+            <strong>Test inicial</strong>
+            <p style="margin:8px 0 0">Cuestionario adaptado para medir niveles de ansiedad digital y ofrecer un plan de prácticas personalizado.</p>
+          </div>
+          <div class="card">
+            <strong>Programa de desafíos</strong>
+            <p style="margin:8px 0 0">Retiros digitales guiados (30–60 min) y micro-desafíos diarios para reconectar con actividades fuera de pantalla.</p>
+          </div>
+          <div class="card">
+            <strong>Chatbot de contención</strong>
+            <p style="margin:8px 0 0">Soporte conversacional para momentos de malestar: orienta y sugiere recursos inmediatos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="section-inner">
+        <h3 style="font-family:'Poppins',sans-serif;color:var(--mint-600);margin:6px 0">Equipo y supervisión</h3>
+        <p>Equipo interdisciplinario: estudiantes de Psicología, diseño UX y programación. Contenido y protocolos revisados por psicólogos acreditados. Plan de derivación para casos que requieran intervención clínica.</p>
+      </div>
+    </section>
+
+    <section id="cta">
+      <div class="section-inner" style="text-align:center">
+        <h3 style="font-family:'Poppins',sans-serif;color:var(--mint-600);margin-bottom:6px">Querés formar parte del piloto?</h3>
+        <p>Estamos armando un grupo de adolescentes para validar las funciones y mejorar la experiencia. También podremos compartir el repositorio en GitHub con documentación y mockups.</p>
+        <a href="#" style="display:inline-block;margin-top:10px;padding:10px 18px;border-radius:12px;background:var(--mint-400);color:white;font-weight:700">Candidatarme al piloto</a>
+      </div>
+    </section>
+
+    <footer style="display:flex;justify-content:space-between;align-items:center;padding-top:18px">
+      <div>
+        <strong>ReMind</strong> — Proyecto psico-tecnológico • © 2025
+      </div>
+      <div style="text-align:right">
+        <div style="font-size:0.9rem">Repositorio: <a href="#" aria-label="Link a GitHub">github.com/tu-usuario/ReMind</a></div>
+        <div style="margin-top:6px;color:#234b49;opacity:0.9">Contacto: <a href="mailto:equipo@remind.org">equipo@remind.org</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- modal + breathing timer -->
+  <div class="modal-backdrop" id="backdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal" role="document">
+      <h4 style="margin:0 0 6px">Pausa consciente — 5 minutos</h4>
+      <p style="margin:0 0 12px;color:#2a5850">Seguíme en este ejercicio corto: inhalá 4 seg — retené 4 seg — exhalá 6 seg. Repetí mientras el temporizador corre.</p>
+      <div class="timer" id="timer">05:00</div>
+      <div style="display:flex;gap:10px;justify-content:center;margin-top:10px">
+        <button id="pauseBtn" style="padding:8px 14px;border-radius:10px;border:1px solid rgba(47,143,121,0.08)">Pausar</button>
+        <button id="stopBtn" style="padding:8px 14px;border-radius:10px;background:var(--mint-600);color:white;border:none">Finalizar</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // modular, lightweight timer with accessible toggles
+    const startBtn = document.getElementById('startBtn');
+    const backdrop = document.getElementById('backdrop');
+    const timerEl = document.getElementById('timer');
+    const stopBtn = document.getElementById('stopBtn');
+    const pauseBtn = document.getElementById('pauseBtn');
+
+    let interval = null;
+    let remaining = 300; // 5 minutes in seconds
+    let paused = false;
+
+    function formatTime(s){
+      const m = String(Math.floor(s/60)).padStart(2,'0');
+      const sec = String(s%60).padStart(2,'0');
+      return `${m}:${sec}`;
+    }
+
+    function openModal(){
+      remaining = 300; paused = false; timerEl.textContent = formatTime(remaining);
+      backdrop.style.display = 'flex'; backdrop.setAttribute('aria-hidden','false');
+      startCountdown();
+    }
+
+    function closeModal(){
+      backdrop.style.display = 'none'; backdrop.setAttribute('aria-hidden','true');
+      stopCountdown();
+    }
+
+    function startCountdown(){
+      stopCountdown();
+      interval = setInterval(()=>{
+        if(!paused){
+          if(remaining<=0){
+            stopCountdown();
+            timerEl.textContent = '00:00';
+            setTimeout(()=>alert('¡Bien hecho! Esperamos que te sientas un poco más tranquilo.'),200);
+            closeModal();
+            return;
+          }
+          remaining--;
+          timerEl.textContent = formatTime(remaining);
+        }
+      },1000);
+    }
+
+    function stopCountdown(){
+      if(interval)clearInterval(interval); interval = null;
+    }
+
+    startBtn.addEventListener('click',openModal);
+    stopBtn.addEventListener('click',closeModal);
+    pauseBtn.addEventListener('click',()=>{ paused = !paused; pauseBtn.textContent = paused? 'Continuar' : 'Pausar';});
+
+    // close modal on backdrop click
+    backdrop.addEventListener('click',(e)=>{ if(e.target === backdrop) closeModal(); });
+
+    // small accessibility: trap focus could be added in a next iteration
+  </script>
+</body>
+</html>
